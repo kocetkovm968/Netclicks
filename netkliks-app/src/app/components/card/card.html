@@ -1,12 +1,12 @@
-<a href="film.html" class="content-cards__item">
+<a [routerLink]="['/film', film.id]" class="content-cards__item">
   <div class="content-cards__item--img">
-    <img src="img/card-1.jpg" alt="film">
+    <img [src]="film.image" [alt]="film.title">
   </div>
 
   <div class="content-cards__item--title">
-    <h5>{{title}},</h5>
-    <span>The Martian 2015</span>
+    <h5>{{film.title}},</h5>
+    <span>{{film.original}}</span>
   </div>
-  <p class="content-cards__item--descr">Фантастика, приключения</p>
-  <p class="content-cards__item--rating">7.8</p>
+  <p class="content-cards__item--descr">{{film.category}}</p>
+  <p class="content-cards__item--rating">{{film.rating}}</p>
 </a>
